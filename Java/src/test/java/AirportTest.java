@@ -46,14 +46,6 @@ public class AirportTest {
     }
 
     @Test
-    public void testSortMaxLoadCapacity() {
-        Airport airport = new Airport(planes);
-        airport.sortByMaxLoadCapacity();
-        Assert.assertTrue(airport.getPlanes().get(0).getMaxLoadCapacity() <= 
-                          airport.getPlanes().get(1).getMaxLoadCapacity());
-    }
-
-    @Test
     public void testHasAtLeastOneBomberInMilitaryPlanes() {
         Airport airport = new Airport(planes);
         Assert.assertTrue(airport.getBomberMilitaryPlanes().size() > 0);
