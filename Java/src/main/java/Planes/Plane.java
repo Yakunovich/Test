@@ -24,7 +24,7 @@ abstract public class Plane {
         return maxSpeed;
     }
 
-    public int getMaxFlightDistance() {
+    public int GetMaxFlightDistance() {
         return maxFlightDistance;
     }
 

@@ -39,20 +39,20 @@ public class ExperimentalPlane extends Plane{
         if (!(plane instanceof ExperimentalPlane)) return false;
         if (!super.equals(plane)) return false;
         ExperimentalPlane currentPlane = (ExperimentalPlane) plane;
-        return experimentalType == currentPlane.getExperimentalType()
-               && classificationLevel == currentPlane.getClassificationLevel();
+        return experimentalType == currentPlane.experimentalType
+               && classificationLevel == currentPlane.classificationLevel;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), this.getExperimentalType(), this.getClassificationLevel());
+        return Objects.hash(super.hashCode(), experimentalType, classificationLevel);
     }
 
     @Override
     public String toString() {
         return super.toString().replace("}",
-                ", experimentalType=" + this.getExperimentalType() +
-                        ", classificationLevel=" + this.getClassificationLevel() +
+                ", experimentalType=" + experimentalType +
+                        ", classificationLevel=" + classificationLevel +
                         '}');
     }
 }
